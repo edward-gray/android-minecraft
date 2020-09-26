@@ -8,7 +8,7 @@ import java.io.IOException
 
 class ModsJson(private var context: Context) {
 
-    fun getMinecraftCardList(): MutableList<MinecraftCard>? {
+    fun getMinecraftCardList(): List<MinecraftCard>? {
 
         val rawData = getJsonFileAsString()
         val gson = Gson()

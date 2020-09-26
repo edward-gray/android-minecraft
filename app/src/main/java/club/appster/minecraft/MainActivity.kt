@@ -9,6 +9,7 @@ import androidx.navigation.ui.setupWithNavController
 import club.appster.minecraft.data.ModsJson
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_main.*
+import java.util.*
 
 
 @AndroidEntryPoint
@@ -33,6 +34,8 @@ class MainActivity : AppCompatActivity() {
         bottom_navigation.setupWithNavController(navController)
 
         test()
+
+        println("lang: " + Locale.getDefault().language)
 
     }
 

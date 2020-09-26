@@ -2,6 +2,7 @@ package club.appster.minecraft.model
 
 import com.google.gson.annotations.SerializedName
 
+
 data class MinecraftCard(
     var image: String,
 
@@ -19,6 +20,7 @@ data class MinecraftCard(
     @SerializedName("desc_ru")
     var descRu: String
 ) {
+
     override fun toString(): String {
         return "MinecraftCard(image='$image', file='$file', titleEn='$titleEn', titleRu='$titleRu', descEn='$descEn', descRu='$descRu')"
     }
