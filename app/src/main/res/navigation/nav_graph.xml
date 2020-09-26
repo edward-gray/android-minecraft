@@ -3,22 +3,35 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@id/navigation_mods">
+    app:startDestination="@id/splashFragment">
+
     <fragment
-        android:id="@+id/navigation_mods"
+        android:id="@+id/splashFragment"
+        android:name="club.appster.minecraft.ui.splash.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_modsFragment"
+            app:destination="@id/modsFragment"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/splashFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/modsFragment"
         android:name="club.appster.minecraft.ui.mods.ModsFragment"
         android:label="fragment_mods"
         tools:layout="@layout/fragment_mods" />
 
     <fragment
-        android:id="@+id/navigation_favorites"
+        android:id="@+id/favoritesFragment"
         android:name="club.appster.minecraft.ui.favorites.FavoritesFragment"
         android:label="fragment_favorites"
         tools:layout="@layout/fragment_favorites" />
 
     <fragment
-        android:id="@+id/navigation_guide"
+        android:id="@+id/guideFragment"
         android:name="club.appster.minecraft.ui.guide.GuideFragment"
         android:label="fragment_guide"
         tools:layout="@layout/fragment_guide" />
+
 </navigation>
