@@ -5,4 +5,6 @@
     <string name="title_guide">Guide</string>
 
     <string name="text_loading">Loading</string>
+    <string name="card_title_test" translatable="false">This is test title</string>
+    <string name="card_summary_test" translatable="false">this is a really big summary for test that I\'m using, I need more text, more test that I\'m using, I need more text, more</string>
 </resources>

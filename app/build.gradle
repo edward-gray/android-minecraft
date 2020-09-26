@@ -101,6 +101,11 @@ dependencies {
     // Blurry
     def blurry_version = "2.1.0"
     implementation "jp.wasabeef:blurry:$blurry_version"
+
+    // RecyclerView & CardView
+    implementation "androidx.recyclerview:recyclerview:1.1.0"
+    implementation "androidx.cardview:cardview:1.0.0"
+
 }
 
 kapt {
