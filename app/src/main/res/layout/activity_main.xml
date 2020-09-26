@@ -4,13 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/container"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_main">
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/main_container"
         android:name="club.appster.minecraft.ui.common.MainNavHostFragment"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:background="@android:color/transparent"
         app:defaultNavHost="true"
         app:layout_constraintBottom_toTopOf="@+id/activity_view_shadow"
         app:layout_constraintEnd_toEndOf="parent"
@@ -23,7 +25,7 @@
     <View
         android:id="@+id/activity_view_shadow"
         android:layout_width="match_parent"
-        android:layout_height="10dp"
+        android:layout_height="5dp"
         android:background="@drawable/shadow"
         app:layout_constraintBottom_toTopOf="@+id/bottom_navigation" />
 

@@ -4,4 +4,6 @@
     <string name="title_mods">Моды</string>
     <string name="title_favorites">Избраное</string>
     <string name="title_guide">Гайд</string>
+
+    <string name="text_loading">Загружается</string>
 </resources>
