@@ -6,6 +6,7 @@ import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
+import club.appster.minecraft.data.ModsJson
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -30,6 +31,17 @@ class MainActivity : AppCompatActivity() {
             )
         )
         bottom_navigation.setupWithNavController(navController)
+
+        test()
+
+    }
+
+    private fun test() {
+        val minecraftCardList = ModsJson(applicationContext).getMinecraftCardList()
+        minecraftCardList?.map {
+            println("DEBUG: $it")
+        }
+
     }
 
 }

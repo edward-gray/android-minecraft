@@ -6,7 +6,6 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import club.appster.minecraft.R
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.android.synthetic.main.fragment_mods.*
 
 @AndroidEntryPoint
 class ModsFragment : Fragment(R.layout.fragment_mods) {
@@ -14,9 +13,5 @@ class ModsFragment : Fragment(R.layout.fragment_mods) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        viewModel.text.observe(viewLifecycleOwner, {
-            mods_text.text = it
-        })
     }
 }

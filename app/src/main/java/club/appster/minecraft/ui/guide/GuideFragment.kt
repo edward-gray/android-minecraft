@@ -6,7 +6,6 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import club.appster.minecraft.R
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.android.synthetic.main.fragment_guide.*
 
 @AndroidEntryPoint
 class GuideFragment : Fragment(R.layout.fragment_guide) {
@@ -14,9 +13,5 @@ class GuideFragment : Fragment(R.layout.fragment_guide) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        viewModel.text.observe(viewLifecycleOwner, {
-            guide_text.text = it
-        })
     }
 }

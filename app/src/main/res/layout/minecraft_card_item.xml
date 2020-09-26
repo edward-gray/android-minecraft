@@ -5,7 +5,9 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_gravity="center_horizontal|center_vertical"
-    app:cardCornerRadius="10dp">
+    app:cardCornerRadius="10dp"
+    android:layout_marginVertical="10dp"
+    android:layout_marginHorizontal="5dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -60,8 +62,7 @@
                     android:maxLines="3"
                     android:ellipsize="end"
                     android:textColor="@android:color/white"
-                    android:textSize="14sp"
-                    android:textStyle="italic" />
+                    android:textSize="14sp" />
             </LinearLayout>
 
 
@@ -75,8 +76,8 @@
             android:layout_marginBottom="8dp"
             android:background="@drawable/selector_favorites"
             android:checked="false"
-            android:textOn="@null"
             android:textOff="@null"
+            android:textOn="@null"
             app:layout_constraintBottom_toBottomOf="@+id/imageView"
             app:layout_constraintEnd_toEndOf="@+id/imageView" />
 

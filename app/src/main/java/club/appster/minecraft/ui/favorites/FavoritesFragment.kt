@@ -6,7 +6,6 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import club.appster.minecraft.R
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.android.synthetic.main.fragment_favorites.*
 
 @AndroidEntryPoint
 class FavoritesFragment : Fragment(R.layout.fragment_favorites) {
@@ -16,9 +15,6 @@ class FavoritesFragment : Fragment(R.layout.fragment_favorites) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        viewModel.text.observe(viewLifecycleOwner, {
-            fav_text.text = it
-        })
     }
 
 }
