@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/navigation_mods">
+    <fragment
+        android:id="@+id/navigation_mods"
+        android:name="club.appster.minecraft.ui.mods.ModsFragment"
+        android:label="fragment_mods"
+        tools:layout="@layout/fragment_mods" />
+
+    <fragment
+        android:id="@+id/navigation_favorites"
+        android:name="club.appster.minecraft.ui.favorites.FavoritesFragment"
+        android:label="fragment_favorites"
+        tools:layout="@layout/fragment_favorites" />
+
+    <fragment
+        android:id="@+id/navigation_guide"
+        android:name="club.appster.minecraft.ui.guide.GuideFragment"
+        android:label="fragment_guide"
+        tools:layout="@layout/fragment_guide" />
+</navigation>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">minecraft</string>
+    <string name="title_mods">Моды</string>
+    <string name="title_favorites">Избраное</string>
+    <string name="title_guide">Гайд</string>
+</resources>

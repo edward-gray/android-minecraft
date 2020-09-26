@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorTabBarBg">#669CCF</color>
+    <color name="colorTabBarActive">#8EBCE5</color>
+
+    <color name="colorMainBgOne">#6486A5</color>
+    <color name="colorMainBgTwo">#3480C7</color>
+
+</resources>
