@@ -6,10 +6,8 @@ import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
-import club.appster.minecraft.data.implementation.ModsJsonImpl
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_main.*
-import java.util.*
 
 
 @AndroidEntryPoint
@@ -32,19 +30,6 @@ class MainActivity : AppCompatActivity() {
             )
         )
         bottom_navigation.setupWithNavController(navController)
-
-        test()
-
-        println("lang: " + Locale.getDefault().language)
-
-    }
-
-    private fun test() {
-        val minecraftCardList = ModsJsonImpl(applicationContext).getMinecraftCardList()
-        minecraftCardList?.map {
-            println("DEBUG: $it")
-        }
-
     }
 
 }

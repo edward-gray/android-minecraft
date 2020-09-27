@@ -2,7 +2,6 @@ package club.appster.minecraft.ui.mods
 
 import android.os.Bundle
 import android.view.View
-import android.widget.Toast
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
@@ -45,18 +44,18 @@ class ModsFragment : Fragment(R.layout.fragment_mods), ModsAdapter.OnItemClickLi
     override fun onItemClick(position: Int) {
         val bundle = bundleOf("minecraftCard" to minecraftCardList[position])
         navController.navigate(R.id.action_navigation_mods_to_navigation_modDetail, bundle)
-        Toast.makeText(requireActivity().applicationContext, "this is $position", Toast.LENGTH_LONG)
-            .show()
+//        Toast.makeText(requireActivity().applicationContext, "this is $position", Toast.LENGTH_LONG)
+//            .show()
     }
 
     override fun toggleButtonWasClicked(position: Int, isChecked: Boolean) {
         viewModel.saveFavorite(position, isChecked)
 
-        Toast.makeText(
-            requireActivity().applicationContext,
-            "$position - $isChecked",
-            Toast.LENGTH_SHORT
-        ).show()
+//        Toast.makeText(
+//            requireActivity().applicationContext,
+//            "$position - $isChecked",
+//            Toast.LENGTH_SHORT
+//        ).show()
     }
 
 

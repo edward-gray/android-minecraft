@@ -9,6 +9,7 @@ import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_mod_detail.*
 import java.util.*
 
+
 @AndroidEntryPoint
 class ModDetailFragment : Fragment(R.layout.fragment_mod_detail) {
 
@@ -18,6 +19,7 @@ class ModDetailFragment : Fragment(R.layout.fragment_mod_detail) {
         super.onViewCreated(view, savedInstanceState)
         minecraftCard = arguments?.getParcelable("minecraftCard")?: throw Exception("There is no card in mod detail")
         handleUI()
+        handleDownload()
 //        Toast.makeText(requireActivity().applicationContext, minecraftCard.toString(), Toast.LENGTH_LONG).show()
     }
 
@@ -32,7 +34,11 @@ class ModDetailFragment : Fragment(R.layout.fragment_mod_detail) {
                 null,
                 context.packageName
             )
-        val iconResId: Int = context.resources.getIdentifier(minecraftCard.image, "drawable", context.packageName)
+        val iconResId: Int = context.resources.getIdentifier(
+            minecraftCard.image,
+            "drawable",
+            context.packageName
+        )
         modDetail_image_cover.setImageResource(iconResId)
 
         // handling content language
@@ -42,6 +48,12 @@ class ModDetailFragment : Fragment(R.layout.fragment_mod_detail) {
         } else {
             modDetail_text_title.text = minecraftCard.titleEn
             modDetail_text_summary.text = minecraftCard.descEn
+        }
+    }
+
+    private fun handleDownload() {
+        modDetail_button_download.setOnClickListener {
+
         }
     }
 }
