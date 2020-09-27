@@ -26,7 +26,7 @@ class ModsAdapter(
         val imageView: ImageView = itemView.imageView
         val title: TextView = itemView.title
         val summary: TextView = itemView.summary
-        private val toggleButton: ToggleButton = itemView.toggleButton
+        val toggleButton: ToggleButton = itemView.toggleButton
 
         init {
             itemView.setOnClickListener(this)
@@ -82,6 +82,9 @@ class ModsAdapter(
             holder.title.text = currentItem.titleEn
             holder.summary.text = currentItem.descEn
         }
+
+        // setting toggleButton
+        holder.toggleButton.isChecked = currentItem.isFavorite
     }
 
     override fun getItemCount() = minecraftCardList.size
