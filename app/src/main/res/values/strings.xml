@@ -7,6 +7,23 @@
     <string name="text_loading">Loading</string>
     <string name="card_title_test" translatable="false">This is test title</string>
     <string name="card_summary_test" translatable="false">this is a really big summary for test that I\'m using, I need more text, more test that I\'m using, I need more text, more</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="button_download">Download</string>
+    <string name="button_downloading">Downloading</string>
+    <string name="button_install">Install</string>
+
+    <string name="guide_title">Instructions for using the application.</string>
+
+    <string name="guide_sec_1">1. Select your favorite card or mod.</string>
+    <string name="guide_sec_1_title">Jump League</string>
+    <string name="guide_sec_1_description">This is a simple parkour map that overcomes obstacles with command blocks and must defeat the last boss #@$^</string>
+
+    <string name="guide_sec_2_title">2. Press the download button and wait for the map or mod to download to your device.</string>
+
+    <string name="guide_sec_3_title">3. Click the install button, Minecraft will open and import into the game will begin. Wait for the import to finish.</string>
+
+    <string name="guide_sec_4_title">4. The downloaded map will appear in the Worlds section.</string>
+
+    <string name="guide_sec_5_title">5. Enjoy the game :)</string>
+    <string name="guide_sec_5_text_1">If you have installed mods. then they will appear in the appropriate section in the map settings.</string>
+    <string name="guide_sec_5_text_2">Enjoy the game :)</string>
 </resources>

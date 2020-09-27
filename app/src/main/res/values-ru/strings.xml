@@ -6,4 +6,25 @@
     <string name="title_guide">Гайд</string>
 
     <string name="text_loading">Загружается</string>
+
+    <string name="button_download">Скачать</string>
+    <string name="button_downloading">Загрузка</string>
+    <string name="button_install">Установить</string>
+
+    <string name="guide_title">Инструкция по использованию приложения.</string>
+
+    <string name="guide_sec_1">1. Выберите понравившуюся карту или мод.</string>
+    <string name="guide_sec_1_title">Jump League</string>
+    <string name="guide_sec_1_description">Это простая карта паркура, которая преодолевает препятствия с помощью командных блоков и должна победить последнего босса asdasd asdasd asd sadas asd</string>
+
+    <string name="guide_sec_2_title">2. Нажмите кнопку скачать и дождитесь пока карта или мод загрузятся на устройство.</string>
+
+    <string name="guide_sec_3_title">3. Нажмите кнопку установить, откроется Minecraft и начнется импорт в игру. Дождитесь пока импорт закончится.</string>
+
+    <string name="guide_sec_4_title">4. Скачанная карта появится в разделе Миры.</string>
+
+    <string name="guide_sec_5_title">5. Наслаждайтесь игрой :)</string>
+    <string name="guide_sec_5_text_1">Если вы установили моды. то они появятся в соответствующием разделе в настройках карты.</string>
+    <string name="guide_sec_5_text_2">Наслаждайтесь игрой :)</string>
+
 </resources>
