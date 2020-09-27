@@ -1,4 +1,4 @@
-# MINECAFT PLUGIN
+# MINECAFT
 
 <div style="display: flex;">
 <img src="app%20demo/0.png" width="200px">
