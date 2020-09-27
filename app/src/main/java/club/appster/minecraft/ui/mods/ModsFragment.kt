@@ -48,5 +48,10 @@ class ModsFragment : Fragment(R.layout.fragment_mods), ModsAdapter.OnItemClickLi
         Toast.makeText(requireActivity().applicationContext, "this is $position", Toast.LENGTH_LONG).show()
     }
 
+    override fun toggleButtonWasClicked(position: Int, isChecked: Boolean) {
+        Toast.makeText(requireActivity().applicationContext, "$position - $isChecked", Toast.LENGTH_SHORT).show()
+
+    }
+
 
 }

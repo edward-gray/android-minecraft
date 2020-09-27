@@ -4,6 +4,7 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.CompoundButton
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.ToggleButton
@@ -19,14 +20,17 @@ class ModsAdapter(
     private val listener: OnItemClickListener
 ): RecyclerView.Adapter<ModsAdapter.ModsViewHolder>() {
 
-    inner class ModsViewHolder(itemView: View): RecyclerView.ViewHolder(itemView), View.OnClickListener {
+    inner class ModsViewHolder(itemView: View): RecyclerView.ViewHolder(itemView),
+        View.OnClickListener,
+        CompoundButton.OnCheckedChangeListener{
         val imageView: ImageView = itemView.imageView
         val title: TextView = itemView.title
         val summary: TextView = itemView.summary
-        val toggleButton: ToggleButton = itemView.toggleButton
+        private val toggleButton: ToggleButton = itemView.toggleButton
 
         init {
             itemView.setOnClickListener(this)
+            toggleButton.setOnCheckedChangeListener(this)
         }
 
         override fun onClick(v: View?) {
@@ -35,10 +39,18 @@ class ModsAdapter(
                 listener.onItemClick(position)
             }
         }
+
+        override fun onCheckedChanged(buttonView: CompoundButton?, isChecked: Boolean) {
+            val position = adapterPosition
+            if (position != RecyclerView.NO_POSITION) {
+                listener.toggleButtonWasClicked(position, isChecked)
+            }
+        }
     }
 
     interface OnItemClickListener {
         fun onItemClick(position: Int)
+        fun toggleButtonWasClicked(position: Int, isChecked: Boolean)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ModsViewHolder {
