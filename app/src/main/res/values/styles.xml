@@ -3,7 +3,7 @@
     <style name="AppTheme.NoActionBar" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@android:color/white</item>
-        <item name="colorPrimaryDark">@color/colorMainBgTwo</item>
+        <item name="colorPrimaryDark">@color/colorButtonBg</item>
         <item name="colorAccent">@android:color/white</item>
     </style>
 
