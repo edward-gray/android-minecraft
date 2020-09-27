@@ -115,7 +115,7 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="230dp"
-                android:scaleType="centerCrop"
+                android:scaleType="fitStart"
                 app:srcCompat="@drawable/guide_sec_4" />
         </androidx.cardview.widget.CardView>
 
@@ -136,7 +136,7 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="230dp"
-                android:scaleType="centerCrop"
+                android:scaleType="fitStart"
                 app:srcCompat="@drawable/guide_sec_5_1" />
         </androidx.cardview.widget.CardView>
 

@@ -30,7 +30,11 @@
         android:id="@+id/navigation_favorites"
         android:name="club.appster.minecraft.ui.favorites.FavoritesFragment"
         android:label="fragment_favorites"
-        tools:layout="@layout/fragment_favorites" />
+        tools:layout="@layout/fragment_favorites" >
+        <action
+            android:id="@+id/action_navigation_favorites_to_navigation_modDetail"
+            app:destination="@id/navigation_modDetail" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_guide"

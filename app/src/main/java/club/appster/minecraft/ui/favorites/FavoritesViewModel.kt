@@ -37,6 +37,7 @@ constructor(
             viewModelScope.launch {
                 if (!isChecked) {
                     minecraftDaoService.delete(it.toEntity())
+                    getMinecraftList()
                 }
             }
         }
