@@ -15,14 +15,30 @@ import java.util.*
 
 class ModsAdapter(
     private val minecraftCardList: List<MinecraftCard>,
-    private val context: Context
+    private val context: Context,
+    private val listener: OnItemClickListener
 ): RecyclerView.Adapter<ModsAdapter.ModsViewHolder>() {
 
-    class ModsViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
+    inner class ModsViewHolder(itemView: View): RecyclerView.ViewHolder(itemView), View.OnClickListener {
         val imageView: ImageView = itemView.imageView
         val title: TextView = itemView.title
         val summary: TextView = itemView.summary
         val toggleButton: ToggleButton = itemView.toggleButton
+
+        init {
+            itemView.setOnClickListener(this)
+        }
+
+        override fun onClick(v: View?) {
+            val position = adapterPosition
+            if (position != RecyclerView.NO_POSITION) {
+                listener.onItemClick(position)
+            }
+        }
+    }
+
+    interface OnItemClickListener {
+        fun onItemClick(position: Int)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ModsViewHolder {

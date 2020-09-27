@@ -1,8 +1,10 @@
 package club.appster.minecraft.model
 
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
+import kotlinx.android.parcel.Parcelize
 
-
+@Parcelize
 data class MinecraftCard(
     var image: String,
 
@@ -19,7 +21,7 @@ data class MinecraftCard(
 
     @SerializedName("desc_ru")
     var descRu: String
-) {
+): Parcelable {
 
     override fun toString(): String {
         return "MinecraftCard(image='$image', file='$file', titleEn='$titleEn', titleRu='$titleRu', descEn='$descEn', descRu='$descRu')"

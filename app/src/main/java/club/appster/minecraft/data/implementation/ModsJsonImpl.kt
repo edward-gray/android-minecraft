@@ -1,19 +1,20 @@
-package club.appster.minecraft.data
+package club.appster.minecraft.data.implementation
 
 import android.content.Context
+import club.appster.minecraft.data.abstraction.ModsJson
 import club.appster.minecraft.model.MinecraftCard
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import java.io.IOException
 
-class ModsJson(private var context: Context) {
+class ModsJsonImpl(private var context: Context): ModsJson {
 
-    fun getMinecraftCardList(): List<MinecraftCard>? {
+    override fun getMinecraftCardList(): List<MinecraftCard>? {
 
         val rawData = getJsonFileAsString()
-        val gson = Gson()
         val listMinecraftCardType = object : TypeToken<List<MinecraftCard>>() {}.type
 
+        val gson = Gson()
         return gson.fromJson(rawData, listMinecraftCardType)
     }
 
