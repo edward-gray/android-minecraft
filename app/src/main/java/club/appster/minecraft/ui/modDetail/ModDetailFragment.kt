@@ -1,5 +1,6 @@
 package club.appster.minecraft.ui.modDetail
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
@@ -53,7 +54,13 @@ class ModDetailFragment : Fragment(R.layout.fragment_mod_detail) {
 
     private fun handleDownload() {
         modDetail_button_download.setOnClickListener {
-
+            val file = requireActivity().applicationContext.assets.open(minecraftCard.file).use { it.readBytes() }
+            val intent = Intent().apply {
+                action = Intent.ACTION_SEND
+                type = "*/*"
+                putExtra(Intent.EXTRA_STREAM, file)
+            }
+            requireActivity().startActivity(intent)
         }
     }
 }
